@@ -2,115 +2,121 @@
             <div class="container">
                 <div class="row row-margin">
                     <div class="col-sm-3 col-padding">
+                    {foreach name=databerita from=$berita_list_satu item=rs}
                         <div class="post-wrapper post-grid-1 wow fadeIn" data-wow-duration="2s">
                             <div class="post-thumb img-zoom-in">
-                                <a href="#">
-                                    <img class="entry-thumb" src="images/slider/slide-06.jpg" alt="">
+                                <a href="{$rs.url_detail}">
+                                    <img class="entry-thumb" src="{$rs.image}" alt="">
                                 </a>
                             </div>
                             <div class="post-info">
-                                <span class="color-3">SPORTS </span>
-                                <h3 class="post-title post-title-size"><a href="#" rel="bookmark"> The generated Lorem Ipsum is therefore always free from . </a></h3>
+                                <span class="color-3">{$rs.kategori_rubrik}</span>
+                                <h3 class="post-title post-title-size"><a href="#" rel="bookmark">{$rs.judul} </a></h3>
                                 <div class="post-editor-date">
                                     <!-- post date -->
                                     <div class="post-date">
-                                        <i class="pe-7s-clock"></i> Oct 6, 2016
+                                        <i class="pe-7s-clock"></i>{$rs.date_update}
                                     </div>
-                                    <!-- post comment -->
-                                    <div class="post-author-comment"><i class="pe-7s-comment"></i> 13 </div>
+                                    
                                     <!-- read more -->
                                     <a class="readmore pull-right" href="#"><i class="pe-7s-angle-right"></i></a>
                                 </div>
                             </div>
                         </div>
+                    {/foreach}
+                     {foreach name=databeritadua from=$berita_list_dua item=rs}
                         <div class="post-wrapper post-grid-2 wow fadeIn" data-wow-duration="2s">
                             <div class="post-thumb img-zoom-in">
-                                <a href="#">
-                                    <img class="entry-thumb" src="images/slider/slide-07.jpg" alt="">
+                                <a href="{$rs.url_detail}">
+                                    <img class="entry-thumb" src="{$rs.image}" alt="">
                                 </a>
                             </div>
                             <div class="post-info">
-                                <span class="color-5">BUSINESS</span>
-                                <h3 class="post-title post-title-size"><a href="#" rel="bookmark">Contrary to popular belief, Lorem Ipsum is not simply random text. </a></h3>
+                                <span class="color-5">{$rs.kategori_rubrik}</span>
+                                <h3 class="post-title post-title-size"><a href="#" rel="bookmark">{$rs.judul}</a></h3>
                                 <div class="post-editor-date">
                                     <!-- post date -->
                                     <div class="post-date">
-                                        <i class="pe-7s-clock"></i> Oct 6, 2016
+                                        <i class="pe-7s-clock"></i>{$rs.date_update}
                                     </div>
-                                    <!-- post comment -->
-                                    <div class="post-author-comment"><i class="pe-7s-comment"></i> 13 </div>
+                                  
                                     <!-- read more -->
                                     <a class="readmore pull-right" href="#"><i class="pe-7s-angle-right"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    {/foreach}
+                    
                     <div class="col-sm-6 col-padding">
+                     {foreach name=databeritatiga from=$berita_list_tiga item=rs}
                         <div class="post-wrapper post-grid-3 wow fadeIn" data-wow-duration="2s">
                             <div class="post-thumb img-zoom-in">
                                 <a href="#">
-                                    <img class="entry-thumb-middle" src="images/slider/slide-08.jpg" alt="">
+                                    <img class="entry-thumb-middle" src="{$rs.image}" alt="">
                                 </a>
                             </div>
                             <div class="post-info">
-                                <span class="color-4">FASHION</span>
-                                <h3 class="post-title"><a href="#" rel="bookmark">There are many variations of passages of Lorem Ipsum available, but the majority have </a></h3>
+                                <span class="color-4">{$rs.kategori_rubrik}</span>
+                                <h3 class="post-title"><a href="#" rel="bookmark">{$rs.judul} </a></h3>
                                 <div class="post-editor-date">
                                     <!-- post date -->
                                     <div class="post-date">
-                                        <i class="pe-7s-clock"></i> Oct 6, 2016
+                                        <i class="pe-7s-clock"></i>{$rs.date_update}
                                     </div>
-                                    <!-- post comment -->
-                                    <div class="post-author-comment"><i class="pe-7s-comment"></i> 13 </div>
                                     <!-- read more -->
                                     <a class="readmore pull-right" href="#"><i class="pe-7s-angle-right"></i></a>
                                 </div>
                             </div>
                         </div>
+                         {/foreach}
                     </div>
+                   
                     <div class="col-sm-3 col-padding">
+                     {foreach name=databeritaempat from=$berita_list_empat item=rs}
                         <div class="post-wrapper post-grid-4 wow fadeIn" data-wow-duration="2s">
                             <div class="post-thumb img-zoom-in">
                                 <a href="#">
-                                    <img class="entry-thumb" src="images/slider/slide-09.jpg" alt="">
+                                    <img class="entry-thumb" src="{$rs.image}" alt="">
                                 </a>
                             </div>
                             <div class="post-info">
-                                <span class="color-1">TRAVEL</span>
-                                <h3 class="post-title post-title-size"><a href="#" rel="bookmark">The standard chunk of Lorem Ipsum used since the 1500s is reproduced</a></h3>
+                                <span class="color-1">{$rs.kategori_rubrik}</span>
+                                <h3 class="post-title post-title-size"><a href="#" rel="bookmark">{$rs.judul}</a></h3>
                                 <div class="post-editor-date">
                                     <!-- post date -->
                                     <div class="post-date">
-                                        <i class="pe-7s-clock"></i> Oct 6, 2016
+                                        <i class="pe-7s-clock"></i>{$rs.date_update}
                                     </div>
-                                    <!-- post comment -->
-                                    <div class="post-author-comment"><i class="pe-7s-comment"></i> 13 </div>
+                                  
                                     <!-- read more -->
                                     <a class="readmore pull-right" href="#"><i class="pe-7s-angle-right"></i></a>
                                 </div>
                             </div>
                         </div>
+                        {/foreach}
+                        {foreach name=databeritalima from=$berita_list_lima item=rs}
                         <div class="post-wrapper post-grid-5 wow fadeIn" data-wow-duration="2s">
                             <div class="post-thumb img-zoom-in">
                                 <a href="#">
-                                    <img class="entry-thumb" src="images/slider/slide-10.jpg" alt="">
+                                    <img class="entry-thumb" src="{$rs.image}" alt="">
                                 </a>
                             </div>
                             <div class="post-info">
-                                <span class="color-2">TECHNOLOGY</span>
-                                <h3 class="post-title post-title-size"><a href="#" rel="bookmark">The 20 free things in Sydney with your girlfriend </a></h3>
+                                <span class="color-2">{$rs.kategori_rubrik}</span>
+                                <h3 class="post-title post-title-size"><a href="#" rel="bookmark">{$rs.judul} </a></h3>
                                 <div class="post-editor-date">
                                     <!-- post date -->
                                     <div class="post-date">
-                                        <i class="pe-7s-clock"></i> Oct 6, 2016
+                                        <i class="pe-7s-clock"></i> {$rs.date_update}
                                     </div>
-                                    <!-- post comment -->
-                                    <div class="post-author-comment"><i class="pe-7s-comment"></i> 13 </div>
+                                    
                                     <!-- read more -->
                                     <a class="readmore pull-right" href="#"><i class="pe-7s-angle-right"></i></a>
                                 </div>
                             </div>
                         </div>
+                        {/foreach}
                     </div>
                 </div>
             </div>

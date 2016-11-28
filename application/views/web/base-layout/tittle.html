@@ -1,20 +1,15 @@
- <!-- Page Title
-        ============================================= -->
-        <section id="page-title">
-
-            <div class="container clearfix">
-                <h1>{$page_judul}</h1>
-                <ol class="breadcrumb">
-                    {if $page_name neq ''}
-                    <li><a href="{$BASEURL}">Home</a></li>
-                    <li><a href="{$page_modul_url}">{$page_modul}</a></li>
-                    <li class="active">{$page_name}</li>
-                    {else}
-                     <li><a href="{$BASEURL}">Home</a></li>
-                    <li class="active">{$page_modul}</li>
-                   
-                    {/if}
-                </ol>
+         <section class="block-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1>{$page_judul}</h1>
+                        <div class="breadcrumbs">
+                            <ul>
+                                <li><i class="pe-7s-home"></i> <a href="home-style-one.html" title="">Home</a></li>
+                                <li><a href="#" title="">{$page_judul}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-        </section><!-- #page-title end -->
+        </section>

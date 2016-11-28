@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-10-25 02:22:24
+<?php /* Smarty version Smarty-3.1.17, created on 2016-11-20 10:21:52
          compiled from "application\views\private\berita\edit.html" */ ?>
 <?php /*%%SmartyHeaderCode:670957ec5e577155f9-99830456%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3dd96487477d0603c313d224719f480e0c4d8766' => 
     array (
       0 => 'application\\views\\private\\berita\\edit.html',
-      1 => 1477354942,
+      1 => 1479633564,
       2 => 'file',
     ),
   ),
@@ -25,6 +25,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'notification_status' => 0,
     'url_process' => 0,
     'data' => 0,
+    'datakategori' => 0,
+    'rs_kategori' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -92,31 +94,59 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           
               <div class="tab-pane active" id="tab_1">
                 <div class="box-body">
-                   <div class="form-group">
+                  <div class="form-group">
                     <input type="hidden" name="id_berita" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['id_berita'];?>
-">
-                   <input type="hidden" name="id_relawan" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['id_relawan'];?>
-">
-                
+">        
                   </div>
+                  <div class="form-group">
+                    <label>Kategori</label>
+                    <select name="id_kategori" class="form-control" style="width: 50%;">
+                      <?php  $_smarty_tpl->tpl_vars['rs_kategori'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs_kategori']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['datakategori']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['rs_kategori']->key => $_smarty_tpl->tpl_vars['rs_kategori']->value) {
+$_smarty_tpl->tpl_vars['rs_kategori']->_loop = true;
+?>
+                        <option value="<?php echo $_smarty_tpl->tpl_vars['rs_kategori']->value['id_kategori'];?>
+" 
+                        <?php if ($_smarty_tpl->tpl_vars['rs_kategori']->value['id_kategori']==$_smarty_tpl->tpl_vars['data']->value['id_kategori']) {?>selected="selected"<?php }?>><?php echo $_smarty_tpl->tpl_vars['rs_kategori']->value['kategori_rubrik'];?>
+</option>
+                      <?php } ?>
+                    </select>
+                  </div>
+                   
                   <div class="form-group">
                     <label for="user_name_lama">Judul Berita * 
                     </label>
                     <input type="text" name="judul" id="judul" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['judul'];?>
 " class="form-control" size="50" maxlength="255" />
                   </div>
-                  <div class="form-group">
-                    <label for="user_name_lama">Tanggal Berita *
-                    </label>
-                    <input type="text" name="tanggal" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['tanggal'];?>
-" class="tanggal form-control" size="10" maxlength="10" style="width:150px;" />
-                  </div>
+                  
                   <div class="form-group">
                     <label for="user_name_lama">Isi Berita
                     </label>
                     <textarea name="content" cols="72" rows="10"><?php echo $_smarty_tpl->tpl_vars['data']->value['content'];?>
 
                     </textarea>
+                  </div>
+                   <div class="form-group">
+                    <label for="berita_berjalan">Berita Berjalan</label>
+                    <select name="berita_berjalan" class="form-control" style="width: 10%;">
+                      <option  value="yes"  <?php if ($_smarty_tpl->tpl_vars['data']->value['berita_berjalan']=="yes") {?>selected="selected"<?php }?>>Ya</option>
+                      <option value="no"  <?php if ($_smarty_tpl->tpl_vars['data']->value['berita_berjalan']=="no") {?>selected="selected"<?php }?>>Tidak</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="publish">Publish</label>
+                    <select name="publish" class="form-control" style="width: 10%;">
+                      <option value="yes" <?php if ($_smarty_tpl->tpl_vars['data']->value['publish']=="yes") {?>selected="selected"<?php }?>>Ya</option>
+                      <option value="no" <?php if ($_smarty_tpl->tpl_vars['data']->value['publish']=="no") {?>selected="selected"<?php }?>>Tidak</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="user_name_lama">Keyword
+                    </label>
+                    <input type="text" name="keywords" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['keywords'];?>
+">
                   </div>
                   <div align="center"><?php echo $_smarty_tpl->tpl_vars['data']->value['image_berita'];?>
 </div>

@@ -1,3 +1,3 @@
 <?php
-    header('location: ../index.php/public/login');
+    header('location: ../index.php/private/loginadmin');
 ?>

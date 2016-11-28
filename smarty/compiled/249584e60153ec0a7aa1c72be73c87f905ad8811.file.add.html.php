@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-10-25 02:26:15
+<?php /* Smarty version Smarty-3.1.17, created on 2016-11-20 09:19:40
          compiled from "application\views\private\berita\add.html" */ ?>
 <?php /*%%SmartyHeaderCode:367357ebe3482a45c0-28380252%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '249584e60153ec0a7aa1c72be73c87f905ad8811' => 
     array (
       0 => 'application\\views\\private\\berita\\add.html',
-      1 => 1477354679,
+      1 => 1479629888,
       2 => 'file',
     ),
   ),
@@ -25,6 +25,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'notification_status' => 0,
     'url_process' => 0,
     'data' => 0,
+    'rs_kategori' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -93,11 +94,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               <div class="tab-pane active" id="tab_1">
                 <div class="box-body">
                    <div class="form-group">
-                   
-                   
-                  
-                      <input type="hidden" name="id_relawan" value="1">
-                
+                    <label>Kategori</label>
+                    <select name="id_kategori" class="form-control" style="width: 50%;">
+                      <?php  $_smarty_tpl->tpl_vars['rs_kategori'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['rs_kategori']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['data']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['rs_kategori']->key => $_smarty_tpl->tpl_vars['rs_kategori']->value) {
+$_smarty_tpl->tpl_vars['rs_kategori']->_loop = true;
+?>
+                        <option value="<?php echo $_smarty_tpl->tpl_vars['rs_kategori']->value['id_kategori'];?>
+"><?php echo $_smarty_tpl->tpl_vars['rs_kategori']->value['kategori_rubrik'];?>
+</option>
+                      <?php } ?>
+                    </select>
                   </div>
                   <div class="form-group">
                     <label for="user_name_lama">Judul Berita * 
@@ -105,12 +113,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <input type="text" name="judul" id="judul" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['judul'];?>
 " class="form-control" size="50" maxlength="255" />
                   </div>
-                  <div class="form-group">
-                    <label for="user_name_lama">Tanggal Berita *
-                    </label>
-                    <input type="text" name="tanggal" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['tanggal'];?>
-" class="tanggal form-control" size="10" maxlength="10" style="width:150px;" />
-                  </div>
+                  
                   <div class="form-group">
                     <label for="user_name_lama">Isi Berita
                     </label>
@@ -119,7 +122,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     </textarea>
                   </div>
                   <div class="form-group">
-                    <label for="user_name_lama">File Gambar (300x400 pixel) 
+                    <label for="berita_berjalan">Berita Berjalan</label>
+                    <select name="berita_berjalan" class="form-control" style="width: 10%;">
+                      <option value="yes">Ya</option>
+                      <option value="no">Tidak</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="publish">Publish</label>
+                    <select name="publish" class="form-control" style="width: 10%;">
+                      <option value="yes">Ya</option>
+                      <option value="no">Tidak</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="user_name_lama">Keyword
+                    </label>
+                    <input type="text" name="keywords" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="user_name_lama">File Gambar
                     
                     </label>
                     <span>
@@ -139,8 +161,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   <div class="form-group">
                     <label for="user_name_lama">Keterangan Gambar
                     </label>
-                    <input type="text" name="keterangan_gambar" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['keterangan_gambar'];?>
-" size="100" maxlength="200" class="form-control" />
+                    <input type="text" name="keterangan_gambar"  class="form-control" />
                   </div>
                   
                 </div>

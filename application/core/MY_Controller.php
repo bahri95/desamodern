@@ -25,43 +25,46 @@
             $this->base_load_app();
             // view app data
             $this->base_view_app();
-   
-
-            // //banner
-            // $this->_display_banner();
-            // //sosmed
-            // $this->_display_sosmed();
-            // //
-            // $this->_display_banner_atas();
-       
-           
-            // //foto
-            // $this->_display_foto();
-
-            // //album
-            // $this->_display_album();
-
-            // //video
-            // $this->_display_video();
-
-            // //berita relawan utama
-            // $this->berita_relawan_utama();
-
-      
-
-            // //berita gubernur
-            // $this->beritacagub_cawagub();
-
-           $menu_aktif = $this->uri->segment(2,0);
-           $this->smarty->assign('menu_aktif', $menu_aktif);
+            //menu
+            $this->menu();
+            //sosmed
+            $this->_display_sosmed();
+            //berita sidebar
+            $this->berita_sidebar();
+            //berita_berjalan
+            $this->berita_berjalan();
+            //berita_terbaru_footer
+            $this->berita_terabaru_footer();
+            
+            $menu_aktif = $this->uri->segment(2,0);
+            $this->smarty->assign('menu_aktif', $menu_aktif);
         
         }
-       
-        public function berita_relawan_utama(){
+
+        private
+        function menu() {
+            $this->smarty->assign('homeurl', site_url('public/home'));
+            $this->smarty->assign('baseurl', BASEURL);
+            
+            $this->load->model('generalmodel');
+            $datamenu = $this->generalmodel->get_list_menu_kategori();
+            foreach($datamenu as $key=>$data):
+            $datamenu[$key]['url_detail'] = site_url('public/berita/kategori/'.$data['id_kategori'].'/'.url_title($data['kategori_rubrik']));
+            endforeach;
+             $this->smarty->assign('datamenu', $datamenu);
+        }
+
+        public function berita_berjalan(){
             // get data
             $this->load->model('beritamodel');
-            $result = $this->beritamodel->get_berita_relawan_utama_side();
-        
+            $result = $this->beritamodel->get_list_berita_berjalan();
+            $this->smarty->assign("list_berita_berjalan", $result);
+        }
+
+        public function berita_terabaru_footer(){
+            // get data
+            $this->load->model('beritamodel');
+            $result = $this->beritamodel->get_list_berita_terbaru_footer();
             if(!empty($result)):
             foreach($result as $key=>$data):
             $path = 'doc/berita/'.$data['id_berita']."/";
@@ -70,47 +73,33 @@
             } else {
                 $result[$key]['image']= BASEURL.'doc/tmp.default.jpg';
             }
-                $result[$key]['tanggal'] = $this->datetimemanipulation->GetFullDateWithDay($data['tanggal']);
-                $result[$key]['url_detail'] = site_url('public/berita/detail/'.$data['id_relawan'].'/'.$data['id_berita'].'/'.url_title($data['judul']));
+                $result[$key]['date_update'] = $this->datetimemanipulation->GetFullDateWithDay($data['date_update']);
+                $result[$key]['url_detail'] = site_url('public/berita/detail/'.$data['id_kategori'].'/'.$data['id_berita'].'/'.url_title($data['judul']));
                 $result[$key]['content'] = strip_tags($this->getIntroText($data['content'],100));
             endforeach;
             endif;
-            $this->smarty->assign("berita_list_side", $result);
-            $this->smarty->assign("page_modul", 'Berita');
-            $this->smarty->assign("page_modul_url", site_url('public/berita'));
+            $this->smarty->assign("list_berita_terbaru_footer", $result);
         }
 
-        
-        public function beritacagub_cawagub(){
-            //berita cagub-cawagub
-            // get data
-            $this->load->model('informasimodel');
-            $result = $this->informasimodel->get_list_informasi_side();
-           
-            
+        public function berita_sidebar(){
+            $this->load->model('beritamodel');
+            $result = $this->beritamodel->get_list_berita_sidebar();
             if(!empty($result)):
             foreach($result as $key=>$data):
-            
-            
-            $path = 'doc/informasi/'.$data['id_informasi']."/";
-            
+            $path = 'doc/berita/'.$data['id_berita']."/";
             if(is_file($path.$data['image'])){
                 $result[$key]['image'] = BASEURL.$path.$data['image'];
             } else {
                 $result[$key]['image']= BASEURL.'doc/tmp.default.jpg';
             }
-
-            
-            
-                $result[$key]['tanggal'] = $this->datetimemanipulation->GetFullDateWithDay($data['tanggal']);
-                $result[$key]['url_detail'] = site_url('public/informasi/detail/'.$data['id_informasi'].'/'.url_title($data['judul']));
+                $result[$key]['date_update'] = $this->datetimemanipulation->GetFullDateWithDay($data['date_update']);
+                $result[$key]['url_detail'] = site_url('public/berita/detail/'.$data['id_kategori'].'/'.$data['id_berita'].'/'.url_title($data['judul']));
                 $result[$key]['content'] = strip_tags($this->getIntroText($data['content'],100));
-            
             endforeach;
             endif;
-            $this->smarty->assign("informasi_list_side", $result);
+            $this->smarty->assign('berita_sidebar', $result);
         }
-   
+       
        
         public
         function _display_video()
@@ -217,12 +206,7 @@
         $this->layout->load_javascript("themes/js/front/desmod/owl-carousel/owl.carousel.js");
         $this->layout->load_javascript("themes/js/front/desmod/RYPP.js");
         $this->layout->load_javascript("themes/js/front/desmod/jquery-ui.js");
-
-        $this->layout->load_javascript("themes/js/front/desmod/custom.js");
-      
-
-            
-           
+        $this->layout->load_javascript("themes/js/front/desmod/custom.js");     
         }
 
         private
@@ -232,8 +216,8 @@
             $this->smarty->assign("url_login_view_admin", site_url("private/loginadmin/index"));
             $this->smarty->assign("url_login_process_admin", site_url("private/loginadmin/process_login"));
             $this->smarty->assign("url_lupa_pass_admin", site_url("private/lupapassword"));
-            $this->smarty->assign("url_login_view", site_url("public/login/view"));
-            $this->smarty->assign("url_login_process", site_url("public/login/process_login"));
+            $this->smarty->assign("url_login_view", site_url("private/loginadmin"));
+            $this->smarty->assign("url_login_process", site_url("private/loginadmin/process_login"));
             $this->smarty->assign("url_lupa_pass", site_url("public/lupapassword"));
             $this->smarty->assign("url_search_base", site_url("public/pencarian/index"));
             $search = $this->session->userdata('keyword');
@@ -359,7 +343,7 @@
             if(!empty($this->id_user)) {
                 $this->smarty->assign('user_login', true);
                 // link
-                $this->smarty->assign("url_logout_admin_process", site_url("public/login"));
+                $this->smarty->assign("url_logout_admin_process", site_url("private/loginadmin/process_logout"));
                 $this->smarty->assign("url_private", site_url("private/dashboard"));
                 // load
                 $this->load->model('accountmodel');
@@ -382,7 +366,7 @@
                 endif;
                
                 if($data['jenis_kelamin'] == 'L'):
-                
+                $pathfoto = 'doc/admin/'.$data['id_user'].'/'.$data['photo'];
                 if(!empty($data['photo']) AND is_file($pathfoto)) {
                     $data['photo'] = BASEURL.$pathfoto;
                 } else {

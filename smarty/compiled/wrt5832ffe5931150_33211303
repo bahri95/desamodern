@@ -1,0 +1,274 @@
+<?php /* Smarty version Smarty-3.1.17, created on 2016-11-21 15:08:37
+         compiled from "application\views\web\base-layout\sidebar.html" */ ?>
+<?php /*%%SmartyHeaderCode:132745805a6c1277104-40725526%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '4aa8bdc77de23e5614b18a829abc45841dc97812' => 
+    array (
+      0 => 'application\\views\\web\\base-layout\\sidebar.html',
+      1 => 1479737311,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '132745805a6c1277104-40725526',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.17',
+  'unifunc' => 'content_5805a6c1303b26_49344125',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5805a6c1303b26_49344125')) {function content_5805a6c1303b26_49344125($_smarty_tpl) {?><div class="col-sm-4 left-padding">
+                    <aside class="sidebar">
+                        <div class="input-group search-area"> <!-- search area -->
+                            <input type="text" class="form-control" placeholder="Search articles here ..." name="q">
+                            <div class="input-group-btn">
+                                <button class="btn btn-search" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </div>
+                        </div> <!-- /.search area -->
+                        <div class="banner-add"> <!-- add -->
+                            <span class="add-title">- Advertisement -</span>
+                            <a href="#"><img src="images/ad-banner.jpg" class="img-responsive center-block" alt=""></a>
+                        </div>
+                        <div class="tab-inner">
+                            <ul class="tabs">
+                                <li><a href="#">POPULAR</a></li>
+                                <li><a href="#">MOST VIEWED</a></li>
+                            </ul><hr> <!-- tabs -->
+                            <div class="tab_content">
+                                <div class="tab-item-inner">
+                                    <div class="box-item wow fadeIn" data-wow-duration="1s">
+                                        <div class="img-thumb">
+                                            <a href="#" rel="bookmark"><img class="entry-thumb" src="images/popular_news_01.jpg" alt="" height="80" width="90"></a>
+                                        </div>
+                                        <div class="item-details">
+                                            <h6 class="sub-category-title bg-color-1">
+                                                <a href="#">SPORTS</a>
+                                            </h6>
+                                            <h3 class="td-module-title"><a href="#">It is a long established fact that a reader will</a></h3>
+                                            <div class="post-editor-date">
+                                                <!-- post date -->
+                                                <div class="post-date">
+                                                    <i class="pe-7s-clock"></i> Oct 6, 2016
+                                                </div>
+                                                <!-- post comment -->
+                                                <div class="post-author-comment"><i class="pe-7s-comment"></i> 13 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                                        <div class="img-thumb">
+                                            <a href="#" rel="bookmark"><img class="entry-thumb" src="images/popular_news_02.jpg" alt="" height="80" width="90"></a>
+                                        </div>
+                                        <div class="item-details">
+                                            <h6 class="sub-category-title bg-color-2">
+                                                <a href="#">TECHNOLOGY </a>
+                                            </h6>
+                                            <h3 class="td-module-title"><a href="#">The generated Lorem Ipsum is therefore</a></h3>
+                                            <div class="post-editor-date">
+                                                <!-- post date -->
+                                                <div class="post-date">
+                                                    <i class="pe-7s-clock"></i> Oct 6, 2016
+                                                </div>
+                                                <!-- post comment -->
+                                                <div class="post-author-comment"><i class="pe-7s-comment"></i> 13 </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="box-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                                        <div class="img-thumb">
+                                            <a href="#" rel="bookmark"><img class="entry-thumb" src="images/popular_news_03.jpg" alt="" height="80" width="90"></a>
+                                        </div>
+                                        <div class="item-details">
+                                            <h6 class="sub-category-title bg-color-3">
+                                                <a href="#">HEALTH</a>
+                                            </h6>
+                                            <h3 class="td-module-title"><a href="#">The standard chunk of Lorem Ipsum used since</a></h3>
+                                            <div class="post-editor-date">
+                                                <!-- post date -->
+                                                <div class="post-date">
+                                                    <i class="pe-7s-clock"></i> Oct 6, 2016
+                                                </div>
+                                                <!-- post comment -->
+                                                <div class="post-author-comment"><i class="pe-7s-comment"></i> 13 </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="box-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+                                        <div class="img-thumb">
+                                            <a href="#" rel="bookmark"><img class="entry-thumb" src="images/popular_news_04.jpg" alt="" height="80" width="90"></a>
+                                        </div>
+                                        <div class="item-details">
+                                            <h6 class="sub-category-title bg-color-4">
+                                                <a href="#">FASHION</a>
+                                            </h6>
+                                            <h3 class="td-module-title"><a href="#">Lorem Ipum therefore always free from</a></h3>
+                                            <div class="post-editor-date">
+                                                <!-- post date -->
+                                                <div class="post-date">
+                                                    <i class="pe-7s-clock"></i> Oct 6, 2016
+                                                </div>
+                                                <!-- post comment -->
+                                                <div class="post-author-comment"><i class="pe-7s-comment"></i> 13 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- / tab item -->
+                                <div class="tab-item-inner">
+                                    <div class="box-item">
+                                        <div class="img-thumb">
+                                            <a href="#" rel="bookmark"><img class="entry-thumb" src="images/popular_news_01.jpg" alt="" height="80" width="90"></a>
+                                        </div>
+                                        <div class="item-details">
+                                            <h6 class="sub-category-title bg-color-5">
+                                                <a href="#">BUSINESS</a>
+                                            </h6>
+                                            <h3 class="td-module-title"><a href="#">It is a long established fact that a reader will</a></h3>
+                                            <div class="post-editor-date">
+                                                <!-- post date -->
+                                                <div class="post-date">
+                                                    <i class="pe-7s-clock"></i> Oct 6, 2016
+                                                </div>
+                                                <!-- post comment -->
+                                                <div class="post-author-comment"><i class="pe-7s-comment"></i> 13 </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="box-item">
+                                        <div class="img-thumb">
+                                            <a href="#" rel="bookmark"><img class="entry-thumb" src="images/popular_news_02.jpg" alt="" height="80" width="90"></a>
+                                        </div>
+                                        <div class="item-details">
+                                            <h6 class="sub-category-title bg-color-2">
+                                                <a href="#">TECHNOLOGY </a>
+                                            </h6>
+                                            <h3 class="td-module-title"><a href="#">The generated Lorem Ipsum is therefore</a></h3>
+                                            <div class="post-editor-date">
+                                                <!-- post date -->
+                                                <div class="post-date">
+                                                    <i class="pe-7s-clock"></i> Oct 6, 2016
+                                                </div>
+                                                <!-- post comment -->
+                                                <div class="post-author-comment"><i class="pe-7s-comment"></i> 13 </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="box-item">
+                                        <div class="img-thumb">
+                                            <a href="#" rel="bookmark"><img class="entry-thumb" src="images/popular_news_03.jpg" alt="" height="80" width="90"></a>
+                                        </div>
+                                        <div class="item-details">
+                                            <h6 class="sub-category-title bg-color-3">
+                                                <a href="#">HEALTH</a>
+                                            </h6>
+                                            <h3 class="td-module-title"><a href="#">The standard chunk of Lorem Ipsum used since</a></h3>
+                                            <div class="post-editor-date">
+                                                <!-- post date -->
+                                                <div class="post-date">
+                                                    <i class="pe-7s-clock"></i> Oct 6, 2016
+                                                </div>
+                                                <!-- post comment -->
+                                                <div class="post-author-comment"><i class="pe-7s-comment"></i> 13 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box-item">
+                                        <div class="img-thumb">
+                                            <a href="#" rel="bookmark"><img class="entry-thumb" src="images/popular_news_04.jpg" alt="" height="80" width="90"></a>
+                                        </div>
+                                        <div class="item-details">
+                                            <h6 class="sub-category-title bg-color-4">
+                                                <a href="#">FASHION</a>
+                                            </h6>
+                                            <h3 class="td-module-title"><a href="#">Lorem Ipum therefore always free from</a></h3>
+                                            <div class="post-editor-date">
+                                                <!-- post date -->
+                                                <div class="post-date">
+                                                    <i class="pe-7s-clock"></i> Oct 6, 2016
+                                                </div>
+                                                <!-- post comment -->
+                                                <div class="post-author-comment"><i class="pe-7s-comment"></i> 13 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- / tab item -->
+                            </div> <!-- / tab_content -->
+                        </div> <!-- / tab -->
+                        <!-- comments -->
+                        <div class="latest-comments-inner">
+                            <h3 class="category-headding ">LATEST COMMENT</h3>
+                            <div class="headding-border"></div>
+                            <!-- latest comment post -->
+                            <div class="post-style2 latest-com">
+                                <img src="images/comment-01.jpg" alt="">
+                                <div class="latest-com-detail">
+                                    <h5><a href="#" title="">It uses a dictionary of over</a></h5>
+                                    <span>Nec sagittis sem nibh dictionary...</span>
+                                    <p>Proin gravida nibh vel velit auctor aliquet. </p>
+
+                                </div>
+                            </div>
+                            <!-- latest comment post -->
+                            <div class="post-style2 latest-com">
+                                <img src="images/comment-02.jpg" alt="">
+                                <div class="latest-com-detail">
+                                    <h5><a href="#" title="">It uses a dictionary of over</a></h5>
+                                    <span>Nec sagittis sem nibh dictionary...</span>
+                                    <p>Proin gravida nibh vel velit auctor aliquet. </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slider widget -->
+                        <div class="widget-slider-inner">
+                            <h3 class="category-headding ">Slider Widget</h3>
+                            <div class="headding-border"></div>
+                            <div id="widget-slider" class="owl-carousel owl-theme">
+                                <!-- widget item -->
+                                <div class="item">
+                                    <a href="#"><img src="images/slider-widget-1.jpg" alt=""></a>
+                                    <h4><a href="#">For good results must be make good plan</a></h4>
+                                    <div class="date">
+                                        <ul>
+                                            <li>By<a title="" href="#"><span>Jone Kilna</span></a> --</li>
+                                            <li><a title="" href="#">11 Nov 2015</a></li>
+                                        </ul>
+                                    </div>
+                                    <p>Dhaka: Dhaka Metropolitan Sessions a Judge Court on Wednesday issued warrants for the arrest of 29 BNP leaders,
+                                        including some ina senior leaders...</p>
+                                </div>
+                                <!-- widget item -->
+                                <div class="item">
+                                    <a href="#"><img src="images/slider-widget-2.jpg" alt=""></a>
+                                    <h4><a href="#">Dog invason sparks chaos at IPL match</a></h4>
+                                    <div class="date">
+                                        <ul>
+                                            <li>By<a title="" href="#"><span>Jone Kilna</span></a> --</li>
+                                            <li><a title="" href="#">11 Nov 2015</a></li>
+                                        </ul>
+                                    </div>
+                                    <p>Dhaka: Dhaka Metropolitan Sessions a Judge Court on Wednesday issued warrants for the arrest of 29 BNP leaders,
+                                        including some ina senior leaders ...</p>
+                                </div>
+                                <!-- widget item -->
+                                <div class="item">
+                                    <a href="#"><img src="images/slider-widget-3.jpg" alt=""></a>
+                                    <h4><a href="#">For good results must be make good plan</a></h4>
+                                    <div class="date">
+                                        <ul>
+                                            <li>By<a title="" href="#"><span>Jone Kilna</span></a> --</li>
+                                            <li><a title="" href="#">11 Nov 2015</a></li>
+                                        </ul>
+                                    </div>
+                                    <p>Dhaka: Dhaka Metropolitan Sessions a Judge Court on Wednesday issued warrants for the arrest of 29 BNP leaders,
+                                        including some ina senior leaders ...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div><?php }} ?>

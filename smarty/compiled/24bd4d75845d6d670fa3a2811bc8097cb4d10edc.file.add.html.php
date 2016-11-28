@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-10-17 07:26:41
+<?php /* Smarty version Smarty-3.1.17, created on 2016-11-19 03:37:37
          compiled from "application\views\private\informasi\add.html" */ ?>
 <?php /*%%SmartyHeaderCode:7207580458648eed16-48616218%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '24bd4d75845d6d670fa3a2811bc8097cb4d10edc' => 
     array (
       0 => 'application\\views\\private\\informasi\\add.html',
-      1 => 1476681997,
+      1 => 1477472544,
       2 => 'file',
     ),
   ),
@@ -114,7 +114,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   </div>
                   <div class="form-group">
                     <label for="user_name_lama">File Gambar 
-                      <i>(Maks 5 Mb)
+                      <i>(640x360 pixel)
                       </i>
                     </label>
                     <span>

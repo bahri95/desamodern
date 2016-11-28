@@ -1,57 +1,28 @@
 
-
-              
-
-                <div class="container clearfix">
-
-               
-
-                    <!-- Post Content
-                    ============================================= -->
-                    <div class="postcontent nobottommargin clearfix">
-
-                        <!-- Posts
-                        ============================================= -->
-                        <div id="posts" class="small-thumbs">
       
-                             {foreach name=berita_list from=$berita_list item=rs}
-                            <div class="entry clearfix">
-                                <div class="entry-image">
-                                  
-                                          
-                                                <img class="image_fade" src="{$rs.image}" alt="Standard Post with Gallery">
-                                               
-                                           
-                                       
-                                </div>
-                                <div class="entry-c">
-                                    <div class="entry-title">
-                                        <h2><a href="{$rs.url_detail}">{$rs.judul}</a></h2>
-                                    </div>
-                                    <ul class="entry-meta clearfix">
-                                        <li><i class="icon-calendar3"></i> {$rs.tanggal}</li>
-                                        <li><i class="icon-folder-open"></i> {$page_modul}</li>
-                                       
-                                    </ul>
-                                    <div class="entry-content">
-                                        <p>{$rs.content}</p>
-                                        <a href="{$rs.url_detail}"class="more-link">Selengkapnya...</a>
-                                    </div>
-                                </div>
+           
+                <div class="col-sm-8">
+                    {if $berita_list neq ''}
+                    {foreach name=berita_list from=$berita_list item=rs}
+                    <!--Post list-->
+                    <div class="post-style2 wow fadeIn" data-wow-duration="1s">
+                        <a href=""><img src="{$rs.image}" alt=""></a>
+                        <div class="post-style2-detail">
+                            <h3><a href="#" title="">{$rs.judul}</a></h3>
+                            <div class="date">
+                                <ul>
+                                    <li><img src="{$rs.image}" class="img-responsive" alt=""></li>
+                                    <li>Oleh <a title="{$rs.admin_name}"><span>{$rs.admin_name}</span></a> --</li>
+                                    <li><a title="" href="#">{$rs.date_update}</a> --</li>
+                                   
+                                </ul>
                             </div>
-
-                         {/foreach}
-
-
-                        </div><!-- #posts end -->
-
-                        <!-- Pagination
-                        ============================================= -->
-                        {if $pagging neq ''}
-
-                        <ul class="pager nomargin">
-                            {$pagging}
-                        </ul><!-- .pager end -->
-                        {/if}
-
+                            <p>{$rs.content}</p>
+                            <a class="btn btn-style" href="{$rs.url_detail}">Selengkapnya</a>
+                        </div>
+                    </div>
+                    {/foreach}
+                    {/if}
                 </div>
+            
+        

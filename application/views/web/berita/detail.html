@@ -1,115 +1,72 @@
+<div class="col-sm-8">
+                    <article class="content">
+                        <div class="post-thumb">
+                            <img src="{$data.image}" class="img-responsive post-image" alt="">
+                            <div class="social">
+                                <ul>
+                                    <li><a href="#" class="facebook"><i class="fa  fa-facebook"></i><span>3987</span> </a></li>
+                                    <li><a href="#" class="twitter"><i class="fa  fa-twitter"></i><span>3987</span></a></li>
+                                    <li><a href="#" class="google"><i class="fa  fa-google-plus"></i><span>3987</span></a></li>
+                                    <li><a href="#" class="flickr"><i class="fa fa-flickr"></i><span>3987</span> </a></li>
 
-                    <!-- Post Content
-                    ============================================= -->
-                    <div class="postcontent nobottommargin clearfix">
-
-                        <div class="single-post nobottommargin">
-
-                            <!-- Single Post
-                            ============================================= -->
-                            <div class="entry clearfix">
-
-                                <!-- Entry Title
-                                ============================================= -->
-                                <div class="entry-title">
-                                    <h2>{$data.judul}</h2>
-                                </div><!-- .entry-title end -->
-
-                                <!-- Entry Meta
-                                ============================================= -->
-                                <ul class="entry-meta clearfix">
-                                    <li><i class="icon-calendar3"></i> {$data.tanggal}</li>
-                                    
-                                </ul><!-- .entry-meta end -->
-
-                                <!-- Entry Content
-                                ============================================= -->
-                                <div class="entry-content notopmargin">
-
-                                    <!-- Entry Image
-                                    ============================================= -->
-                                    <div class="entry-image alignleft">
-                                        <a href="#"><img src="{$data.image}" alt="Blog Single"></a>
-                                        <p><h6><i>{$data.keterangan_gambar}</i></h6></p>
-                                    </div><!-- .entry-image end -->
-
-                                    {$data.content}
-                                    <!-- Post Single - Content End -->
-                                    <div class="line"></div>
-                                    <div class="clear"></div>
-
-                                    <!-- Post Single - Share
-                                    ============================================= -->
-                                  
-                                        <span>Bagikan:</span>
-                                      <span class='st_facebook_vcount' displayText='Facebook'></span>
-                                        <span class='st_twitter_vcount' displayText='Tweet'></span>
-                                    
-
-                                </div>
-                            </div><!-- .entry end -->
-
-                            <h4>Related Posts:</h4>
-
-                            <div class="related-posts clearfix">
-
-                                <div class="col_half nobottommargin">
-                                      {foreach name=berita_list from=$berita_list item=rs}
-                                    <div class="mpost clearfix">
-                                        <div class="entry-image">
-                                            <img src="{$rs.image}" alt="Blog Single">
-                                        </div>
-                                        <div class="entry-c">
-                                            <div class="entry-title">
-                                                <h4><a href="{$rs.url_detail}">{$rs.judul}</a></h4>
-                                            </div>
-                                            <ul class="entry-meta clearfix">
-                                                <li><i class="icon-calendar3"></i> {$rs.tanggal}</li>
-                                                
-                                            </ul>
-                                          
-                                        </div>
-                                    </div>
-                                    {/foreach}
-
-                                  
-
-                                </div>
-
-                                <div class="col_half nobottommargin col_last">
-                                {if $berita_list_kedua neq '' }
-                                    {foreach name=berita_list-kedua from=$berita_list_kedua item=rs}
-                                    <div class="mpost clearfix">
-                                        <div class="entry-image">
-                                            <img src="{$rs.image}" alt="Blog Single">
-                                        </div>
-                                        <div class="entry-c">
-                                            <div class="entry-title">
-                                                <h4><a href="{$rs.url_detail}">{$rs.judul}</a></h4>
-                                            </div>
-                                            <ul class="entry-meta clearfix">
-                                                <li><i class="icon-calendar3"></i> {$rs.tanggal}</li>
-                                            
-                                            </ul>
-                                           
-                                        </div>
-                                    </div>
-                                    {/foreach}
-                                    {/if}
-                                    
-
-                                </div>
-
-                            </div>
-
-                                <div class="clear"></div>
-                               
+                                </ul>
+                            </div> <!-- /.social icon -->
+                        </div> 
+                        <h1>{$data.judul}</h1>
+                        <div class="date">
+                            <ul>
+                                <li>By<a title="" href="#"><span> {$data.admin_name}</span></a> --</li>
+                                <li><a title="" href="#">{$data.date_update}</a> --</li>
+                              
+                            </ul>
                         </div>
+                        <p>{$data.content}</p>
+                        <div class="row">
+                       
+                        <!-- Related news area
+                        ============================================ -->
+                        <div class="related-news-inner">
+                            <h3 class="category-headding ">BERITA TERKAIT</h3>
+                            <div class="headding-border"></div>
+                            <div class="row">
+                                <div id="content-slide-5" class="owl-carousel">
+                                    <!-- item-1 -->
+                                    <div class="item">
+                                        <div class="row rn_block">
+                                            {foreach name=berita_terkait from=$berita_terkait item=rs}
+                                            <div class="col-xs-6 col-md-4 col-sm-4 padd">
+                                                <div class="post-wrapper wow fadeIn" data-wow-duration="2s" data-wow-delay="1s"><!-- image -->
+                                                    <div class="post-thumb">
+                                                        <a href="{$rs.url_detail}">
+                                                            <img class="img-responsive" src="{$rs.image}" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="post-info meta-info-rn">
+                                                        <div class="slide">
+                                                            <a target="_blank" href="#" class="post-badge btn_two">{$rs.kategori_rubrik
+                                                            }</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-title-author-details">
+                                                    <h4><a href="#">{$rs.judul}</a></h4>
+                                                    <div class="post-editor-date">
+                                                        <div class="post-date">
+                                                            <i class="pe-7s-clock"></i>{$rs.date_update}
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {/foreach}
 
-                    </div><!-- .postcontent end -->
-
-{literal}
-
-<script type="text/javascript" id="st_insights_js" src="http://w.sharethis.com/button/buttons.js?publisher=a4abca36-32a8-4c45-9716-281f17242f3b&product=widget"></script>
-<script type="text/javascript">stLight.options({publisher: "a4abca36-32a8-4c45-9716-281f17242f3b", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-{/literal}
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                        <!-- form
+                        ============================================ -->
+                        
+                    </article>
+                </div>

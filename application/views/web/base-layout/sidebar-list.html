@@ -1,0 +1,76 @@
+<aside class="col-sm-4 left-padding">
+                    <div class="input-group search-area"> <!-- search area -->
+                        <input type="text" class="form-control" placeholder="Search articles here ..." name="q">
+                        <div class="input-group-btn">
+                            <button class="btn btn-search" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                    <!-- social icon -->
+                    <h3 class="category-headding ">SOSIAL MEDIA</h3>
+                    <div class="headding-border"></div>
+                    <div class="social">
+                        <ul>
+                            {foreach name=sosmed from=$datasosmed item=rs}
+                            <li><a href="{$rs.link}" class="{$rs.logo}"><i class="fa  fa-{$rs.logo}"></i></a></li>
+                            {/foreach}
+
+                        </ul>
+                    </div> <!-- /.social icon -->
+                    <div class="tab-inner">
+                        <ul class="tabs">
+                            <li><a href="#">POPULAR</a></li>
+                            <li><a href="#">MOST VIEWED</a></li>
+                        </ul><hr> <!-- tabs -->
+                        <div class="tab_content">
+                            <div class="tab-item-inner">
+                               {foreach name=beritasidebar from=$berita_sidebar item=rs}
+                                    <div class="box-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+                                        <div class="img-thumb">
+                                            <a href="{$rs.url_detail}" rel="bookmark"><img class="entry-thumb" src="{$rs.image}" alt="" height="80" width="90"></a>
+                                        </div>
+                                        <div class="item-details">
+                                            <h6 class="sub-category-title bg-color-4">
+                                                <a href="#">{$rs.kategori_rubrik}</a>
+                                            </h6>
+                                            <h3 class="td-module-title"><a href="{$rs.url_detail}">{$rs.judul}</a></h3>
+                                            <div class="post-editor-date">
+                                                <!-- post date -->
+                                                <div class="post-date">
+                                                    <i class="pe-7s-clock"></i>{$rs.date_update}
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                {/foreach}
+                            </div> <!-- / tab item -->
+                            <div class="tab-item-inner">
+                                 {foreach name=beritasidebar from=$berita_sidebar item=rs}
+                                    <div class="box-item" data-wow-duration="1s" data-wow-delay="0.3s">
+                                        <div class="img-thumb">
+                                            <a href="#" rel="bookmark"><img class="entry-thumb" src="{$rs.image}" alt="" height="80" width="90"></a>
+                                        </div>
+                                        <div class="item-details">
+                                            <h6 class="sub-category-title bg-color-4">
+                                                <a href="#">{$rs.kategori_rubrik}</a>
+                                            </h6>
+                                            <h3 class="td-module-title"><a href="{$rs.url_detail}">{$rs.judul}</a></h3>
+                                            <div class="post-editor-date">
+                                                <!-- post date -->
+                                                <div class="post-date">
+                                                    <i class="pe-7s-clock"></i>{$rs.date_update}
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                {/foreach}
+                                </div>
+                            </div> <!-- / tab item -->
+                        </div> <!-- / tab_content -->
+                    </div> <!-- / tab -->
+                    <div class="banner-add"> <!-- add -->
+                        <span class="add-title">- Advertisement -</span>
+                        <a href="#"><img src="images/ad-banner.jpg" class="img-responsive center-block" alt=""></a>
+                    </div>
+                </aside>

@@ -26,7 +26,7 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 // CONFIG Hosting
 
-$config['base_url'] = 'http://' . $_SERVER['HTTP_HOST'] . "/adminsystem/";
+$config['base_url'] = 'http://' . $_SERVER['HTTP_HOST'] . "/desamodern/adminsystem/";
 
 // CONFIG LOCAL
 // $config['base_url']	= 'http://'.$_SERVER['HTTP_HOST'].'/regubasli/adminsystem/';

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-10-19 10:39:02
+<?php /* Smarty version Smarty-3.1.17, created on 2016-11-16 13:31:28
          compiled from "application\views\private\base-layout\document.html" */ ?>
 <?php /*%%SmartyHeaderCode:2591957ea41d4ef6163-08257629%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '985f90fb749eb9e3b279a3440dc676881793741a' => 
     array (
       0 => 'application\\views\\private\\base-layout\\document.html',
-      1 => 1476866308,
+      1 => 1479298357,
       2 => 'file',
     ),
   ),
@@ -45,8 +45,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </small>-->                  </p>                </li>                <!-- Menu Body -->                <li class="user-body">                  <div class="col-xs-4 text-center">                    <a href="<?php echo $_smarty_tpl->tpl_vars['user_account']->value['account_url'];?>
 ">Akun                    </a>                  </div>                  <div class="col-xs-4 text-center">                    <a href="<?php echo $_smarty_tpl->tpl_vars['user_account']->value['profile_url'];?>
 ">Profil                    </a>                  </div>                  <div class="col-xs-4 text-center">                    <a href="<?php echo $_smarty_tpl->tpl_vars['user_account']->value['profile_url'];?>
-">Photo                    </a>                  </div>                </li>                <!-- Menu Footer-->                <li class="user-footer">                  <?php if ($_smarty_tpl->tpl_vars['user_account']->value['id_auth']=='5') {?>                  <div class="pull-left">                    <a href="<?php echo $_smarty_tpl->tpl_vars['user_account']->value['url_profil_museum'];?>
-" class="btn btn-default btn-flat">Profil Museum                    </a>                  </div>                  <?php }?>                  <div class="pull-right">                    <a href="<?php echo $_smarty_tpl->tpl_vars['url_logout_admin_process']->value;?>
+">Photo                    </a>                  </div>                </li>                <!-- Menu Footer-->                <li class="user-footer">                                   <div class="pull-left">                    <a href="<?php echo $_smarty_tpl->tpl_vars['url_logout_admin_process']->value;?>
 " class="btn btn-default btn-flat">Log Out                    </a>                  </div>                </li>              </ul>            </li>                      </ul>        </div>      </nav>    </header>    <div class="wrapper row-offcanvas row-offcanvas-left">      <!-- Left side column. contains the logo and sidebar -->            <aside class="left-side sidebar-offcanvas">        <?php echo $_smarty_tpl->getSubTemplate ("private/base-layout/sidebar.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
       </aside>            <!-- Right side column. Contains the navbar and content of the page -->            <aside class="right-side">        <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['template_content']->value).".html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
       </aside>      <!-- /.right-side -->          </div>    <!-- ./wrapper -->    <!-- javascript loaded -->        <?php echo $_smarty_tpl->tpl_vars['LOADJS']->value;?>

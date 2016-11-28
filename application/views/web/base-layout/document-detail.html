@@ -11,26 +11,14 @@
         {include file="web/base-layout/tittle.html"}
         <!-- Content
         ============================================= -->
-        <section id="content">
-
-            <div class="content-wrap">
-                <div class="container clearfix">
-                <div class="postcontent nobottommargin clearfix">
-
+       <div class="container">
+            <div class="row">
+                    {include file="$template_content"}
+                   
+                        {include file="web/base-layout/sidebar.html"}
                     
-
-                         {include file="$template_content"}
-
-                       
-                </div>
-               
-                    {include file="web/base-layout/sidebar.html"}
-         
-                
-                </div>
             </div>
-
-        </section><!-- #content end -->
+        </div>
 
         {include file="web/base-layout/footer.html"}
 

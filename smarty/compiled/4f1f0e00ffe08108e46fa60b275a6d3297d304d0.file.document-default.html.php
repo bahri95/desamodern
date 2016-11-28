@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-10-17 08:33:51
+<?php /* Smarty version Smarty-3.1.17, created on 2016-11-22 05:46:00
          compiled from "application\views\web\base-layout\document-default.html" */ ?>
 <?php /*%%SmartyHeaderCode:2742258046ffdb39581-19412385%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4f1f0e00ffe08108e46fa60b275a6d3297d304d0' => 
     array (
       0 => 'application\\views\\web\\base-layout\\document-default.html',
-      1 => 1476686028,
+      1 => 1479789951,
       2 => 'file',
     ),
   ),
@@ -27,45 +27,38 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php echo $_smarty_tpl->getSubTemplate ("web/base-layout/header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
-<body class="stretched">
+<body>
     
     <!-- Document Wrapper
     ============================================= -->
-    <div id="wrapper" class="clearfix">
-
+  
         <?php echo $_smarty_tpl->getSubTemplate ("web/base-layout/menu.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
-        <?php echo $_smarty_tpl->getSubTemplate ("web/base-layout/tittle.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
 
         <!-- Content
         ============================================= -->
-        <section id="content">
+        <?php echo $_smarty_tpl->getSubTemplate ("web/base-layout/tittle.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-            <div class="content-wrap">
-                
+        <div class="container">
+             <div class="row">
                 <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['template_content']->value), $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-                 <?php echo $_smarty_tpl->getSubTemplate ("web/base-layout/sidebar.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+                <?php echo $_smarty_tpl->getSubTemplate ("web/base-layout/sidebar-list.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-            </div>
+                <?php echo $_smarty_tpl->getSubTemplate ("web/base-layout/paging.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-        </section><!-- #content end -->
-
+            </div>     
+        </div>     
         <?php echo $_smarty_tpl->getSubTemplate ("web/base-layout/footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-
-    </div><!-- #wrapper end -->
+            
 
     <!-- Go To Top
     ============================================= -->
-    <div id="gotoTop" class="icon-angle-up"></div>
-
+   
     <!-- javascript loaded -->
     <?php echo $_smarty_tpl->tpl_vars['LOADJS']->value;?>
 
     <!-- end of loaded javascript -->
-
 </body>
 </html>
 <?php }} ?>

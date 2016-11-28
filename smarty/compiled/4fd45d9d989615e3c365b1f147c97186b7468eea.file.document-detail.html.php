@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-10-17 10:42:06
+<?php /* Smarty version Smarty-3.1.17, created on 2016-11-22 05:44:07
          compiled from "application\views\web\base-layout\document-detail.html" */ ?>
 <?php /*%%SmartyHeaderCode:131625802fadb732704-76693302%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4fd45d9d989615e3c365b1f147c97186b7468eea' => 
     array (
       0 => 'application\\views\\web\\base-layout\\document-detail.html',
-      1 => 1476693532,
+      1 => 1479789845,
       2 => 'file',
     ),
   ),
@@ -39,28 +39,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
         <!-- Content
         ============================================= -->
-        <section id="content">
+       <div class="container">
+            <div class="row">
+                    <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['template_content']->value), $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-            <div class="content-wrap">
-                <div class="container clearfix">
-                <div class="postcontent nobottommargin clearfix">
+                   
+                        <?php echo $_smarty_tpl->getSubTemplate ("web/base-layout/sidebar.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
                     
-
-                         <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['template_content']->value), $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
-
-                       
-                </div>
-               
-                    <?php echo $_smarty_tpl->getSubTemplate ("web/base-layout/sidebar.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
-         
-                
-                </div>
             </div>
-
-        </section><!-- #content end -->
+        </div>
 
         <?php echo $_smarty_tpl->getSubTemplate ("web/base-layout/footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
