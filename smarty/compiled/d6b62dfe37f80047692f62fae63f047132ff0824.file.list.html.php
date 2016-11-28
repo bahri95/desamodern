@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2016-09-28 18:55:11
+<?php /* Smarty version Smarty-3.1.17, created on 2016-11-28 03:43:43
          compiled from "application\views\private\video\list.html" */ ?>
 <?php /*%%SmartyHeaderCode:1442757ebf5ef2a70c3-58020718%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd6b62dfe37f80047692f62fae63f047132ff0824' => 
     array (
       0 => 'application\\views\\private\\video\\list.html',
-      1 => 1473302640,
+      1 => 1476936079,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.17',
+  'unifunc' => 'content_57ebf5ef379ff5_92769322',
   'variables' => 
   array (
     'url_private' => 0,
@@ -29,8 +31,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'pagging' => 1,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.17',
-  'unifunc' => 'content_57ebf5ef379ff5_92769322',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_57ebf5ef379ff5_92769322')) {function content_57ebf5ef379ff5_92769322($_smarty_tpl) {?><script type="text/javascript">  function konfirmasi_delete_data(){    tanya = confirm('Apakah anda yakin akan menghapus data ini!');    if(tanya){      return true;    }    else{      return false;    }  }</script><section class="content-header">  <h1>    Video    <small>panel    </small>  </h1>  <ol class="breadcrumb">    <li>      <a href="<?php echo $_smarty_tpl->tpl_vars['url_private']->value;?>
 ">        <i class="fa fa-home">        </i> Home      </a>    </li>    <li class="active">Video    </li>  </ol></section><!-- Main content --><section class="content">  <!-- Small boxes (Stat box) -->  <div class="row">    <!-- notification template -->    <?php if ($_smarty_tpl->tpl_vars['notification_msg']->value!='') {?>    <div class="col-md-12">      <?php if ($_smarty_tpl->tpl_vars['notification_status']->value=='red') {?>      <div class="alert alert-danger alert-dismissable">        <i class="fa fa-ban">        </i>        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;        </button>        <?php echo $_smarty_tpl->tpl_vars['notification_msg']->value;?>
@@ -44,11 +44,9 @@ $_smarty_tpl->tpl_vars['result']->_loop = true;
 ?>                <tr>                  <td align="center">                    <input type="checkbox" name="id_video[]" class="checkbox" value="<?php echo $_smarty_tpl->tpl_vars['result']->value['id_video'];?>
 " />                  </td>                  <td align="center"><?php echo $_smarty_tpl->tpl_vars['no']->value++;?>
 .                  </td>                  <td><?php echo $_smarty_tpl->tpl_vars['result']->value['judul_video'];?>
-                    <br/>                    (                    <i><?php echo $_smarty_tpl->tpl_vars['result']->value['judul_english'];?>
-                    </i>)                    <br />                    <br />                    Video :                     <br /><?php echo $_smarty_tpl->tpl_vars['result']->value['video_file'];?>
+                                       <br />                    <br />                    Video :                     <br /><?php echo $_smarty_tpl->tpl_vars['result']->value['video_file'];?>
                     <br />                    <br />                    <strong>Keterangan:                    </strong>                    <br /><?php echo $_smarty_tpl->tpl_vars['result']->value['keterangan'];?>
-                    <br/>                    (                    <i><?php echo $_smarty_tpl->tpl_vars['result']->value['keterangan_english'];?>
-                    </i>)                    <br />                    <br />                    <strong>Sumber :                     </strong>                    <br /><?php echo $_smarty_tpl->tpl_vars['result']->value['sumber'];?>
+                                       <br />                    <br />                    <strong>Sumber :                     </strong>                    <br /><?php echo $_smarty_tpl->tpl_vars['result']->value['sumber'];?>
                     <br />                  </td>                  <td align="center"><?php echo $_smarty_tpl->tpl_vars['result']->value['tipe'];?>
                   </td>                  <td align="center">                    <a href="<?php echo $_smarty_tpl->tpl_vars['url_edit']->value;?>
 /<?php echo $_smarty_tpl->tpl_vars['result']->value['id_video'];?>
