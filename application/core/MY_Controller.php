@@ -244,16 +244,7 @@
             $this->smarty->assign('homeurl', site_url('public/home'));
             $this->smarty->assign('baseurl', BASEURL);
            
-            //profil asli
-            $this->load->model('profilmodel');
-            $profil = $this->profilmodel->get_list_profil();
-           
-            $this->smarty->assign('profil', $profil);
-            //profil Relawan
-            $this->load->model('relawanmodel');
-             $relawan = $this->relawanmodel->get_list_relawan();
-           
-            $this->smarty->assign('relawan', $relawan);
+            
             // page data
             $segments = $this->uri->total_segments();
             
@@ -282,15 +273,8 @@
             $this->db->limit(1);
             $kontak = $this->db->get()->row_array();
             $this->smarty->assign('kontakinfo', $kontak);
-            $this->load->model('relawanmodel');
-            $relawan = $this->relawanmodel->get_list_relawan();
-            
-            if($relawan <> ''){
-            foreach($relawan as $key=>$data):
-            $relawan[$key]['url_detail'] = site_url('public/relawan/profil/'.$data['id_relawan'].'/'.url_title($data['nama']));
-            endforeach;
-            $this->smarty->assign('relawanfooter', $relawan);
-            }
+          
+          
             //get data berita 
             $this->load->library('datetimemanipulation');
             $this->db->select('*');
